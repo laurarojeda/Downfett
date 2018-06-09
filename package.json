@@ -1,0 +1,15 @@
+{
+  "name": "boba-fett-vs-sarlacc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --watch --serveStatic 'public'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.24.4"
+  }
+}
