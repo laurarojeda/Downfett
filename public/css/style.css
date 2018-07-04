@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "Starjedi";
+  src: url(../fonts/Starjedi.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "aaQwertz-Tasten";
+  src: url(../fonts/aaQwertz-Tasten.ttf) format("truetype");
+}
+
+body {
+  margin-top: 80px;
+  padding: 0;
+  width: 100%;
+  height: 710px;
+  background-image: url('../assets/space.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  width: 400px;
+  height: 640px;
+  background-image: url('../assets/boba-vs-sarlacc.jpg');
+  background-size: 450px;
+  position: relative;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 50px 0 50px 0;
+}
+
+.middle {
+  margin: 50px 20px 20px;
+}
+
+.options-btn {
+  padding: 10px 0 40px;
+}
+
+.down-btn{
+  padding-right: 20px;
+}
+
+#game-title {
+  font-family: "Starjedi";
+  letter-spacing: 1px;
+  margin: 20px 0 50px 0;
+  font-size: 50px;
+  color: rgb(136, 23, 23);
+  text-shadow:
+      6px 6px 0 #000,
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+}
+
+#start {
+  margin: 250px 0 50px 0;
+}
+
+.round-btn {
+  width: 85px;
+  height: 80px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-family: "Impact";
+  font-size: 30px;
+  text-align: center;
+}
+
+.large-btn {
+  width: 140px;
+  height: 30px;
+  color: white;
+  border: none;
+  border-radius: 50px 120px 50px 120px;
+  text-decoration: none;
+  font-family: "arial";
+  font-size: 18px;
+}
+
+.round-btn:focus,
+.large-btn:focus {
+  outline: 0;
+}
+
+.round-btn:active,
+.large-btn:active {
+  box-shadow: 0 0;
+  transform: translateY(4px);
+}
+
+.yellow-btn {
+  background: rgb(233, 198, 0);
+  box-shadow: 0 8px rgb(163, 139, 0);
+  text-shadow: 
+    -1px -1px 1px rgb(163, 139, 0), 
+     1px 1px 1px rgb(163, 139, 0), 
+    -1px 1px 1px rgb(163, 139, 0), 
+    1px -1px 1px rgb(163, 139, 0);
+}
+
+.red-btn {
+  font-size: 23px;
+  background: rgb(136, 23, 23);
+  box-shadow: 0 8px  rgb(104, 19, 19);
+  text-shadow: 
+    -1px -1px 1px rgb(104, 19, 19), 
+     1px 1px 1px rgb(104, 19, 19), 
+    -1px 1px 1px rgb(104, 19, 19), 
+    1px -1px 1px rgb(104, 19, 19);
+}
+
+.green-large-btn {
+  background: rgb(10, 129, 79);  
+  box-shadow: 0 8px  rgb(9, 105, 65);
+  text-shadow: 
+    -1px -1px 1px rgb(9, 105, 65), 
+     1px 1px 1px rgb(9, 105, 65), 
+    -1px 1px 1px rgb(9, 105, 65), 
+    1px -1px 1px rgb(9, 105, 65);
+}
+
+.red-large-btn {
+  font-size: 18px;
+  background: rgb(136, 23, 23);
+  box-shadow: 0 8px  rgb(104, 19, 19);
+  text-shadow: 
+    -1px -1px 1px rgb(104, 19, 19), 
+     1px 1px 1px rgb(104, 19, 19), 
+    -1px 1px 1px rgb(104, 19, 19), 
+    1px -1px 1px rgb(104, 19, 19);
+}
+
+.pop-up-left,
+.pop-up-right {
+  display: none;
+  position: absolute;
+  background-color: rgb(233, 198, 0);
+  width: 77%;
+  height: 69%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 100px auto;
+  border: 10px solid rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+}
+
+p {
+  margin: 50px 20px 20px;
+  font-family: "arial";
+  font-size: 15px;
+  text-align: justify;
+}
+
+p:nth-child(3) {
+  margin-top: -2.5%;
+  font-size: 17px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.controls {
+  font-family: "aaQwertz-Tasten";
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.close-left,
+.close-right {
+    color: white;
+    float: right;
+    margin: 5px 20px 0 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.close-left:hover,
+.close-left:focus,
+.close-right:hover,
+.close-right:focus {
+    color: black;
+    text-decoration: none;
+}
+
+canvas {
+  display: none;
+}
+
+#end-game {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 650px;
+}
+
+#try-again-btn {
+  margin: 400px 0 50px 160px;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,74 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Downfett</title>
 </head>
+
 <body>
-  <canvas id="game-board" width="400" height="640" style="border:1px solid black"></canvas>
+  <div>
+    <section class="menu col">
+      <div id="game-title">
+        <header>Downfett</header>
+      </div>
+      <div id="start">
+        <button id="start-btn" class="round-btn yellow-btn">Start</button>
+      </div>
+
+      <div class="row">
+        <div>
+          <div class="down-btn">
+            <button id="instructions-btn" class="large-btn green-large-btn">Instructions</button>
+          </div>
+          <div id="instructions-content" class="col pop-up-left">
+            <span class="close-left">&times;</span>
+            <p>Nos situamos en el episodio VI de Star Wars, en el planeta Tatooine.<br> 
+              El cazarecompensas Boba Fett asiste a la ejecución de Luke Skywalker y Han Solo, a manos -o tentáculos- del Sarlacc.<br> 
+              Sin embargo, consiguen escapar y quien acaba en la boca del monstruo es él.<br>
+              <b>Ayuda a Boba Fett a tener una muerte más digna</b>, antes de quedarte sin tiempo o vida.
+            </p>
+            <p>Controles:<br>
+              <b class="controls">a</b> para ir a la <b>izquierda</b><br>
+              <b class="controls">d</b> para ir a la <b>derecha</b><br>
+              <!-- S = space -->
+              <b class="controls">S</b> para <b>disparar</b><br>
+              <!-- Q = Esc -->
+              <b class="controls">Q</b> para <b>pausar</b></p>
+          </div>
+        </div>
+        <div>
+          <button id="options-btn" class="large-btn green-large-btn">Options</button>
+          <div>
+            <div id="options-content" class="pop-up-right">
+              <span class="close-right">&times;</span>
+              <div class="col middle">
+                <div class="options-btn">
+                  <button id="music-btn" class="large-btn green-large-btn">Music On</button>
+                </div>
+                <div class="options-btn">
+                  <button id="sound-effects-btn" class="large-btn green-large-btn">Sounds On</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="end-game" class="col">
+        <button id="try-again-btn" class="round-btn red-btn">Try
+          <br>again</button>
+    </section>
+
+    <canvas id="game-board" width="400" height="640"></canvas>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="/public/js/config.js"></script>
   <script src="/public/js/background.js"></script>
+  <script src="/public/js/munition.js"></script>
   <script src="/public/js/enemy.js"></script>
   <script src="/public/js/player.js"></script>
   <script src="/public/js/bullet.js"></script>
   <script src="/public/js/game.js"></script>
   <script src="/public/js/main.js"></script>
 </body>
+
 </html>
